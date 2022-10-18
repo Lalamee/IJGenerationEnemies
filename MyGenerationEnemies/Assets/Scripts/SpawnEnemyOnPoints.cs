@@ -8,6 +8,7 @@ public class SpawnEnemyOnPoints : MonoBehaviour
 
     private Transform[] _points;
     private float _spawnTime = 2.0f;
+    private int _numberSpawnPoint = 0;
 
     private void Start()
     {
@@ -21,13 +22,11 @@ public class SpawnEnemyOnPoints : MonoBehaviour
 
     private void Update()
     {
-        if (_spawnTime <= 0)
+        if (_spawnTime <= 0 && _numberSpawnPoint < _points.Length)
         {
-            Random random = new Random();
-            int numberSpawnPoint = random.Next(_points.Length);
-
-            Instantiate(_enemy, _points[numberSpawnPoint].transform.position, Quaternion.identity);
+            Instantiate(_enemy, _points[_numberSpawnPoint].transform.position, Quaternion.identity);
             _spawnTime = 2.0f;
+            _numberSpawnPoint++;
         }
         else
         {
