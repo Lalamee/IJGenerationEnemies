@@ -282,7 +282,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2f9a8ded28079a84eb50bd52a643d10d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _enemy: {fileID: 4116578119066725454, guid: 58b3bc62ae678294e8302f8779dad067, type: 3}
+  _dinosaur: {fileID: -1985329919434206468, guid: 58b3bc62ae678294e8302f8779dad067, type: 3}
   _path: {fileID: 914042386}
 --- !u!1 &707083003
 GameObject:
